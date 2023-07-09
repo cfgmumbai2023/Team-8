@@ -15,10 +15,10 @@ final healthControllerProvider = StateNotifierProvider<HealthController, bool>(
   ),
 );
 
-final getHealthModelProvider = FutureProvider.family((ref, String hid) {
-  final healthController = ref.watch(healthControllerProvider.notifier);
-  return healthController.getHealthCard(hid);
-});
+// final getHealthModelProvider = FutureProvider.family((ref, String hid) {
+//   final healthController = ref.watch(healthControllerProvider.notifier);
+//   return healthController.getHealthCard(hid);
+// });
 
 class HealthController extends StateNotifier<bool> {
   final HealthRepository _healthRepository;
@@ -30,21 +30,21 @@ class HealthController extends StateNotifier<bool> {
         _ref = ref,
         super(false);
 
-  // void updateHealthRepository(BuildContext context) {
-  //   final healthModel = _ref.read(healthModelProvider);
-  //   final userModel = _ref.read(userModelProvider)!;
-  //   _healthRepository.updateHealthCard(healthModel, userModel.hid, context);
-  // }
-
-  Future<HealthModel?> getHealthCard(String hid) async {
-    try {
-      final healthModel = await _healthRepository.getHealthCard(hid);
-      _ref
-          .read(healthModelProvider.notifier)
-          .update((state) => healthModel ?? state);
-      return healthModel;
-    } catch (e) {
-      rethrow;
-    }
+  void updateHealthRepository(BuildContext context) {
+    final healthModel = _ref.read(healthModelProvider);
+    final hid = "988";
+    _healthRepository.updateHealthCard(healthModel, hid, context);
   }
+
+  // Future<HealthModel?> getHealthCard(String hid) async {
+  //   try {
+  //     final healthModel = await _healthRepository.getHealthCard(hid);
+  //     _ref
+  //         .read(healthModelProvider.notifier)
+  //         .update((state) => healthModel ?? state);
+  //     return healthModel;
+  //   } catch (e) {
+  //     rethrow;
+  //   }
+  // }
 }

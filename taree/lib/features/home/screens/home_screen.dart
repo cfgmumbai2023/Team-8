@@ -4,6 +4,7 @@ import 'package:taree/features/home/widgets/line_chart_card2.dart';
 import '../../../core/common/custom_card.dart';
 import '../../../responsive.dart';
 import '../widgets/header_widget.dart';
+import '../widgets/line_chart_3.dart';
 import '../widgets/line_chart_card.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -22,6 +23,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   // void onPageChanged(int page) {
   //   ref.read(pageProvider.notifier).update((state) => page);
   // }
+  final textController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -45,14 +47,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               _height(context),
               // const ActivityDetailsCard(),
               // _height(context),
-              LineChartCard(),
-              _height(context),
               LineChartCard2(),
               _height(context),
               LineChartCard(),
               _height(context),
-              LineChartCard(),
+              LineChartCard3(),
               _height(context),
+              // LineChartCard(),
+              // _height(context),
               // BarGraphCard(),
               DescriptionCard(context),
               _height(context),
@@ -77,7 +79,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
           AspectRatio(
             aspectRatio: Responsive.isMobile(context) ? 9 / 4 : 16 / 6,
-            child: Text("hii"),
+            child: TextField(
+              controller: textController,
+            ),
           ),
         ],
       ),

@@ -39,7 +39,8 @@ class _THealthCardScreenState extends ConsumerState<HealthCardScreen> {
     //     .read(authControllerProvider.notifier)
     //     .updateUserData(userModel, context);
     // ref.read(healthControllerProvider.notifier).updateHealthRepository(context);
-    print("hi");
+    // print("wowo");
+    // print("hi");
     Navigator.pushNamed(
       context,
       HomeScreen.routeName,

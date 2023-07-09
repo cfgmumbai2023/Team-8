@@ -14,7 +14,14 @@ class Menu extends StatefulWidget {
   _MenuState createState() => _MenuState();
 }
 
+const List<String> list = <String>['A', 'B', 'C', 'D'];
+
+
 class _MenuState extends State<Menu> {
+
+String dropdownValue = list.first;
+
+
   List<MenuModel> menu = [
     MenuModel(icon: 'assets/svg/home.svg', title: "Dashboard"),
     // MenuModel(icon: 'assets/svg/profile.svg', title: "Profile"),
@@ -55,7 +62,7 @@ class _MenuState extends State<Menu> {
                   height: 15,
                 ),
                 const Text(
-                  "Summer",
+                  "Sunita",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(
@@ -98,6 +105,50 @@ class _MenuState extends State<Menu> {
                     )
                   ],
                 ),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              margin: const EdgeInsets.symmetric(vertical: 5),
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(6.0),
+                ),
+                color: Color(0xFFA9DFD8).withOpacity(0.1),
+              ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 13, vertical: 7),
+                    child: Icon(Icons.class_),
+                  ),
+                  DropdownButton<String>(
+                    value: dropdownValue,
+                    icon: const Icon(Icons.arrow_downward),
+                    elevation: 16,
+                    style: const TextStyle(color: Colors.white),
+                    underline: Container(
+                      height: 2,
+                      color: Colors.white,
+                    ),
+                    onChanged: (String? value) {
+                      // This is called when the user selects an item.
+                      setState(() {
+                        dropdownValue = value!;
+                      });
+                    },
+                    items: list.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
+                ],
               ),
             ),
             SizedBox(

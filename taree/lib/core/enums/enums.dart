@@ -10,14 +10,13 @@ enum QuestionName {
   subjectVocab('subjectVocab'),
   subjectFamilyTree('subjectFamilyTree'),
   subjectStampDesign('subjectStampDesign'),
-  reportGeneration('reportGeneration'),
   description('description'),
-  gender('gender'),
-  severity('severity'),
-  dateOfBirth('dateOfBirth'),
-  disability('disability'),
-  studentName('studentName'),
-  schoolName('schoolName');
+  // gender('gender'),
+  // severity('severity'),
+  // dateOfBirth('dateOfBirth'),
+  // disability('disability'),
+  // studentName('studentName'),
+  schoolId('schoolId');
 
   final String val;
   const QuestionName(this.val);

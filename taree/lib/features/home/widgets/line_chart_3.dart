@@ -4,56 +4,10 @@ import 'package:flutter/material.dart';
 import '../../../core/common/custom_card.dart';
 import '../../../responsive.dart';
 
-class LineChartCard2 extends StatelessWidget {
-  LineChartCard2({super.key});
+class LineChartCard3 extends StatelessWidget {
+  LineChartCard3({super.key});
 
-  final List<FlSpot> spots = const [
-    FlSpot(1.68, 21.04),
-    FlSpot(2.84, 26.23),
-    FlSpot(5.19, 19.82),
-    FlSpot(6.01, 24.49),
-    FlSpot(7.81, 19.82),
-    FlSpot(9.49, 13.50),
-    FlSpot(12.26, 18.57),
-    FlSpot(15.63, 19.90),
-    FlSpot(20.39, 29.20),
-    FlSpot(23.69, 28.62),
-    FlSpot(26.21, 29.58),
-    FlSpot(29.87, 40.97),
-    FlSpot(32.49, 30.54),
-    FlSpot(35.09, 40.72),
-    FlSpot(38.74, 43.18),
-    FlSpot(41.47, 59.91),
-    FlSpot(43.12, 53.18),
-    FlSpot(46.30, 90.10),
-    FlSpot(47.88, 81.59),
-    FlSpot(51.71, 75.53),
-    FlSpot(54.21, 78.95),
-    FlSpot(55.23, 86.94),
-    FlSpot(57.40, 78.98),
-    FlSpot(60.49, 74.38),
-    FlSpot(64.30, 48.34),
-    FlSpot(67.17, 70.74),
-    FlSpot(70.35, 75.43),
-    FlSpot(73.39, 69.88),
-    FlSpot(75.87, 80.04),
-    FlSpot(77.32, 74.38),
-    FlSpot(81.43, 68.43),
-    FlSpot(86.12, 69.45),
-    FlSpot(90.06, 78.60),
-    FlSpot(94.68, 46.05),
-    FlSpot(98.35, 42.80),
-    FlSpot(101.25, 53.05),
-    FlSpot(103.07, 46.06),
-    FlSpot(106.65, 42.31),
-    FlSpot(108.20, 32.64),
-    FlSpot(110.40, 45.14),
-    FlSpot(114.24, 53.27),
-    FlSpot(116.60, 42.13),
-    FlSpot(118.52, 57.60),
-  ];
-
-   final List<FlSpot> spots2 = const [
+ final List<FlSpot> spots = const [
     FlSpot(1.68, 50.04),
     FlSpot(2.84, 26.23),
     FlSpot(5.19, 40.82),
@@ -98,7 +52,6 @@ class LineChartCard2 extends StatelessWidget {
     FlSpot(116.60, 43.13),
     FlSpot(118.52, 58.60),
   ];
-
   final leftTitle = {
     0: '0',
     20: '2',
@@ -108,18 +61,18 @@ class LineChartCard2 extends StatelessWidget {
     100: '10'
   };
   final bottomTitle = {
-    0: 'Jan',
-    10: 'Feb',
-    20: 'Mar',
-    30: 'Apr',
-    40: 'May',
-    50: 'Jun',
-    60: 'Jul',
-    70: 'Aug',
-    80: 'Sep',
-    90: 'Oct',
-    100: 'Nov',
-    110: 'Dec',
+    0: 'Ramesh',
+    10: 'Suresh',
+    20: 'Raam',
+    30: 'Jadu',
+    40: 'Aditi',
+    50: 'Unnati',
+    60: 'Akhsata',
+    70: 'Akshat',
+    80: 'Raju',
+    90: 'Yash',
+    100: 'Vishal',
+    110: 'Kartik',
   };
 
   @override
@@ -129,7 +82,7 @@ class LineChartCard2 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Average Student Scores vs Month",
+            "Fraction Score Vs Students",
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
@@ -139,7 +92,6 @@ class LineChartCard2 extends StatelessWidget {
             aspectRatio: Responsive.isMobile(context) ? 9 / 4 : 16 / 6,
             child: LineChart(
               LineChartData(
-                // extraLinesData: ExtraLinesData(),
                 lineTouchData: LineTouchData(
                   handleBuiltInTouches: true,
                 ),
@@ -195,24 +147,7 @@ class LineChartCard2 extends StatelessWidget {
                   LineChartBarData(
                       isCurved: true,
                       curveSmoothness: 0,
-                      color: Colors.red,
-                      barWidth: 2.5,
-                      isStrokeCapRound: true,
-                      // belowBarData: BarAreaData(
-                      //   gradient: LinearGradient(
-                      //     begin: Alignment.topCenter,
-                      //     end: Alignment.bottomCenter,
-                      //     colors: [Colors.red, Colors.transparent],
-                      //   ),
-                      //   show: true,
-                      //   color: Theme.of(context).primaryColor.withOpacity(0.5),
-                      // ),
-                      dotData: FlDotData(show: false),
-                      spots: spots),
-                  LineChartBarData(
-                      isCurved: true,
-                      curveSmoothness: 0,
-                      color: Colors.green,
+                      color: Colors.yellow,
                       barWidth: 2.5,
                       isStrokeCapRound: true,
                       // belowBarData: BarAreaData(
@@ -228,7 +163,7 @@ class LineChartCard2 extends StatelessWidget {
                       //   color: Theme.of(context).primaryColor.withOpacity(0.5),
                       // ),
                       dotData: FlDotData(show: false),
-                      spots: spots2),
+                      spots: spots)
                 ],
                 minX: 0,
                 maxX: 120,

@@ -24,27 +24,27 @@ final questionListProvider =
     StateProvider<List<Question>>(((ref) => _questionList));
 
 List<Question> _questionList = [
-  Question(
-    question: "The Child is suffering with:",
-    answers: ['Attention Deficit Disorder', 'Epilepsy', 'Learning Disabilities','Neuromuscular Disorders','Cerebral Palsy','Autism'],
-    name: QuestionName.disability.val,
-    type: QuestionType.multichoice,
-  ),
-  Question(
-    question: "Enter the level of severity of the disease",
-    answers: ['Low', 'Moderate', 'Severe'],
-    name: QuestionName.severity.val,
-    type: QuestionType.multichoice,
-  ),
-  Question(
-    question: "Gender",
-    name: QuestionName.gender.val,
-    answers:['Female','Male'],
-    type: QuestionType.multichoice,
-  ),
+  // Question(
+  //   question: "The Child is suffering with:",
+  //   answers: ['Attention Deficit Disorder', 'Epilepsy', 'Learning Disabilities','Neuromuscular Disorders','Cerebral Palsy','Autism'],
+  //   name: QuestionName.disability.val,
+  //   type: QuestionType.multichoice,
+  // ),
+  // Question(
+  //   question: "Enter the level of severity of the disease",
+  //   answers: ['Low', 'Moderate', 'Severe'],
+  //   name: QuestionName.severity.val,
+  //   type: QuestionType.multichoice,
+  // ),
+  // Question(
+  //   question: "Gender",
+  //   name: QuestionName.gender.val,
+  //   answers:['Female','Male'],
+  //   type: QuestionType.multichoice,
+  // ),
   Question(
     question: "Enter School Name ",
-    name: QuestionName.schoolName.val,
+    name: QuestionName.schoolId.val,
     answers: ['GYAN MANDIR','SARASWATI SHISHU MANDIR'],
     type: QuestionType.multichoice,
   ),

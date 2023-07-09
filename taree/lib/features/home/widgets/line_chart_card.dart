@@ -55,25 +55,25 @@ class LineChartCard extends StatelessWidget {
 
   final leftTitle = {
     0: '0',
-    20: '2K',
-    40: '4K',
-    60: '6K',
-    80: '8K',
-    100: '10K'
+    20: '2',
+    40: '4',
+    60: '6',
+    80: '8',
+    100: '10'
   };
   final bottomTitle = {
-    0: 'Jan',
-    10: 'Feb',
-    20: 'Mar',
-    30: 'Apr',
-    40: 'May',
-    50: 'Jun',
-    60: 'Jul',
-    70: 'Aug',
-    80: 'Sep',
-    90: 'Oct',
-    100: 'Nov',
-    110: 'Dec',
+    0: 'Ramesh',
+    10: 'Suresh',
+    20: 'Raam',
+    30: 'Jadu',
+    40: 'Aditi',
+    50: 'Unnati',
+    60: 'Akhsata',
+    70: 'Akshat',
+    80: 'Raju',
+    90: 'Yash',
+    100: 'Vishal',
+    110: 'Kartik',
   };
 
   @override
@@ -83,7 +83,7 @@ class LineChartCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Steps Overview",
+            "Addition Score Vs Students",
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
